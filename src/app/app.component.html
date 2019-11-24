@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <br>
+
+  <div class="card">
+      <h5 class="card-header">{{header}}</h5>
+      <div class="card-body">
+        <h5 class="card-title" [style.color]='styleColor'>
+          {{title}}
+        </h5>
+
+        <div [hidden]="isShowHideAlert">
+        <div [class]="alertClass" role="alert">
+          this is alert
+        </div>
+
+        <div class='alert'[ngClass]="{'alert-success': isSuccess, 'alert-warning':!isSuccess}" role="alert">
+            A simple success alert—check it out!
+          </div>
+
+        </div>
+
+        <p class="card-text" [innerHTML]="content"></p><!--ใช้ innerHTML มันจะtag aให้เป็น ภาษา html-->
+
+        
+        <a [attr.ttvone]="ttvoneAttr" [href]="linkAddress" class="btn btn-primary" [innerText]='botton'>Go somewhere</a><!--ใส้ [] ที่href จะเปลี่ยนตัวแปรเป็นลิงก์ที่เรากำหนด-->
+     <span> | </span>
+        <button class="btn btn-warning" (click)="onclickEvent($event)">Click event</button>
+      </div>
+    </div>
+
+</div>
+
